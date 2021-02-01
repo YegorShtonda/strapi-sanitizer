@@ -8,7 +8,7 @@ or
 
 # Usage
 ```javascript
-const sanitizer = require('strapi-sanitizer');
+const sanitizer = require('strapi-sanitizer')
 
 module.exports = {
   async find(ctx) {
@@ -35,7 +35,7 @@ module.exports = {
           ],
         }
       ],
-      owner: 'info.fullname'
+      owner: 'info.fullname',
     })
   },
 }
@@ -44,7 +44,7 @@ module.exports = {
 or
 
 ```javascript
-const sanitizer = require('strapi-sanitizer');
+const sanitizer = require('strapi-sanitizer')
 
 module.exports = {
   async find(ctx) {
@@ -79,6 +79,6 @@ module.exports = {
       ],
     }
   ],
-  owner: 'info.fullname'
+  owner: 'info.fullname',
 }
 ```
