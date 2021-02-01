@@ -7,7 +7,7 @@ or
 `$ yarn add strapi-sanitizer`
 
 # Usage
-`
+```javascript
 const sanitizer = require('strapi-sanitizer');
 
 module.exports = {
@@ -39,11 +39,11 @@ module.exports = {
     })
   },
 }
-`
+```
 
 or
 
-`
+```javascript
 const sanitizer = require('strapi-sanitizer');
 
 module.exports = {
@@ -52,10 +52,11 @@ module.exports = {
     return sanitizer(entity, 'Restaurant')
   },
 }
-`
+```
 
 `strapi-project/sanitizer/Restaurant.js`
-`
+
+```javascript
 module.exports = {
   id: true,
   name: true,
@@ -80,4 +81,4 @@ module.exports = {
   ],
   owner: 'info.fullname'
 }
-`
+```
