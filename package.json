@@ -1,0 +1,23 @@
+{
+  "name": "strapi-sanitizer",
+  "version": "1.0.0",
+  "description": "sanitizer for strapi",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YegorShtonda/strapi-sanitizer.git"
+  },
+  "keywords": [
+    "strapi",
+    "sanitizer"
+  ],
+  "author": "Yagor Shtonda",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/YegorShtonda/strapi-sanitizer/issues"
+  },
+  "homepage": "https://github.com/YegorShtonda/strapi-sanitizer#readme"
+}
