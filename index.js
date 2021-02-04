@@ -24,7 +24,7 @@ const sanitizeObject = (data, model) => {
   const newData = {}
   if (data) {
     for(const prop in model) {
-      if (model[prop] === 'function') {
+      if (typeof model[prop] === 'function') {
         newData[prop] = model[prop](data[prop])
       } else if (model[prop] === true) {
         newData[prop] = data[prop]
