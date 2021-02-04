@@ -28,8 +28,8 @@ module.exports = {
           dishes: [
             id: true,
             price: {
-              full: true,
-              price: true,
+              uah: (v) => `${v} UAH`,
+              usd: (v) => `${v} USD`,
               tax: true,
             },
           ],
@@ -72,8 +72,8 @@ module.exports = {
       dishes: [
         id: true,
         price: {
-          full: true,
-          price: true,
+          uah: (v) => `${v} UAH`,
+          usd: (v) => `${v} USD`,
           tax: true,
         },
       ],

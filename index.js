@@ -24,7 +24,9 @@ const sanitizeObject = (data, model) => {
   const newData = {}
   if (data) {
     for(const prop in model) {
-      if (model[prop] === true) {
+      if (model[prop] === 'function') {
+        newData[prop] = model[prop](data[prop])
+      } else if (model[prop] === true) {
         newData[prop] = data[prop]
       } else if (typeof model[prop] === 'string') {
         newData[prop] = sanitizeString(data, model[prop])
@@ -42,14 +44,14 @@ const main = (data, model) => {
   if (!data || !model) return data
   let Model = model
   if (typeof model === 'string') {
-      Model = require(`../../sanitizer/${model}`)
+    Model = require(`../../sanitizer/${model}`)
   }
   if (Array.isArray(data)) {
-      return sanitizeArray(data, Model)
+    return sanitizeArray(data, Model)
   } else if (typeof data === 'object') {
       return sanitizeObject(data, Model)
   } else {
-      return data
+    return data
   }
 }
 
