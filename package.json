@@ -1,6 +1,6 @@
 {
   "name": "strapi-sanitizer",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "sanitizer for strapi",
   "main": "index.js",
   "scripts": {
