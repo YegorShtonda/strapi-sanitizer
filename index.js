@@ -31,9 +31,17 @@ const sanitizeObject = (data, model) => {
       } else if (typeof model[prop] === 'string') {
         newData[prop] = sanitizeString(data, model[prop])
       } else if (Array.isArray(model[prop])) {
-        newData[prop] = sanitizeArray(data[prop], model[prop])
+        if (data[prop]) {
+          newData[prop] = sanitizeArray(data[prop], model[prop])
+        } else {
+          newData[prop] = []
+        }
       } else if (typeof model[prop] === 'object') {
-        newData[prop] = sanitizeObject(data[prop], model[prop])
+        if (data[prop]) {
+          newData[prop] = sanitizeObject(data[prop], model[prop])
+        } else {
+          newData[prop] = null
+        }
       }
     }
   }
