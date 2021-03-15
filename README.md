@@ -26,12 +26,14 @@ module.exports = {
           id: true,
           type: true,
           dishes: [
-            id: true,
-            price: {
-              uah: (v) => `${v} UAH`,
-              usd: (v) => `${v} USD`,
-              tax: true,
-            },
+            {
+              id: true,
+              price: {
+                uah: (v) => `${v} UAH`,
+                usd: (v) => `${v} USD`,
+                tax: true,
+              },
+            }
           ],
         }
       ],
@@ -70,12 +72,14 @@ module.exports = {
       id: true,
       type: true,
       dishes: [
-        id: true,
-        price: {
-          uah: (v) => `${v} UAH`,
-          usd: (v) => `${v} USD`,
-          tax: true,
-        },
+        {
+          id: true,
+          price: {
+            uah: (v) => `${v} UAH`,
+            usd: (v) => `${v} USD`,
+            tax: true,
+          },
+        }
       ],
     }
   ],
